@@ -1,5 +1,22 @@
-# Vue 3 + Vite
+# Seen Wallet - Modern Finance App
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A high-fidelity finance wallet application built with **Vue 3**, **Vite**, and **Tailwind CSS v4**.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## 🚀 Live Demo
+
+[View Live Project](https://seen-wallet-app.vercel.app)
+
+## ✨ Key Features
+
+- **Modern UI**: Implemented complex mesh gradients and glassmorphism components.
+- **Dual-Page Architecture**: Seamless navigation between Dashboard and Card Management.
+- **PWA Ready**: Installable on mobile devices with offline capabilities.
+- **Optimized Layout**: Shared navigation bar ensures consistent UX across views.
+
+## 🛠️ Tech Stack
+
+- **Framework**: Vue 3 (Composition API)
+- **Styling**: Tailwind CSS v4 (Alpha/Beta features)
+- **Routing**: Vue Router 4
+- **Deployment**: Vercel
+- **Tooling**: Vite + Vite Plugin PWA
