@@ -17,7 +17,6 @@ import BottomNav from './components/BottomNav.vue'
 </template>
 
 <style>
-/* 确保 style.css 里的主题变量生效 */
 @import 'tailwindcss';
 @theme {
   --color-seen-accent: #635ad9;
