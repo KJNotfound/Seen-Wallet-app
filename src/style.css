@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-seen-dark: #1a0b3e;
+  --color-seen-purple: #3e1c8d;
+  --color-seen-yellow: #7d8435;
+  --color-seen-accent: #635ad9;
+
+  --background-image-mesh-gradient: linear-gradient(135deg, #1a0b3e 0%, #3e1c8d 45%, #7d8435 100%);
+}
