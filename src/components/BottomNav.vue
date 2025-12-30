@@ -1,32 +1,52 @@
 <template>
   <div
-    class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[340px] h-[68px] bg-white rounded-[35px] shadow-[0_15px_50px_rgba(0,0,0,0.15)] flex justify-around items-center px-4 z-50"
+    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[68px] bg-white shadow-[0_-5px_20px_0px_rgba(0,0,0,0.05)] flex items-center justify-around px-4 z-50 after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-6 after:h-6 after :bg-transparent pb-[env(safe-area-inset-bottom)] >"
+    <!--
+    Home
+    --
   >
     <div
       @click="$router.push('/')"
-      :class="[$route.path === '/' ? 'text-seen-accent' : 'text-gray-300', 'text-2xl cursor-pointer transition-colors']"
+      :class="[
+        isActive('/') ? 'text-purple-500' : 'text-gray-400',
+        'w-10 h-10 flex items-center justify-center text-2xl cursor-pointer transition-colors',
+      ]"
     >
       🏠
     </div>
 
-    <div class="text-gray-300 text-2xl">📊</div>
+    <!-- Stats -->
+    <div class="w-10 h-10 flex items-center justify-center text-2xl text-gray-400">📊</div>
 
+    <!-- Center Action -->
     <div
-      class="w-14 h-14 bg-seen-accent rounded-full flex items-center justify-center text-white shadow-[0_8px_20px_rgba(99,90,217,0.4)] -mt-12 border-[5px] border-white cursor-pointer active:scale-90 transition-transform"
+      class="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center text-white text-xl cursor-pointer transition-transform active:scale-95"
     >
-      <span class="text-xl">⇄</span>
+      ⇄
     </div>
 
+    <!-- Cards -->
     <div
       @click="$router.push('/cards')"
       :class="[
-        $route.path === '/cards' ? 'text-seen-accent' : 'text-gray-300',
-        'text-2xl cursor-pointer transition-colors',
+        isActive('/cards') ? 'text-purple-500' : 'text-gray-400',
+        'w-10 h-10 flex items-center justify-center text-2xl cursor-pointer transition-colors',
       ]"
     >
       💳
     </div>
 
-    <div class="text-gray-300 text-2xl">⠿</div>
+    <!-- More -->
+    <div class="w-10 h-10 flex items-center justify-center text-2xl text-gray-400">⠿</div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+
+const isActive = (path: string) => {
+  return route.path === path || route.path.startsWith(path + '/')
+}
+</script>
